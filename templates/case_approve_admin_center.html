@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> case approve ผู้ดูแลส่วนกลาง</title>
+        <link rel="stylesheet" href="../static/css/case_approve_admin_center.css">
+        <link rel="stylesheet" href="../static/Archive2">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Kanit:400,300&subset=thai,latin' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <link href='https://fonts.googleapis.com/css?family=Kanit:400,300&subset=thai,latin' rel='stylesheet'type='text/css'>
+        <script>
+            
+            $(document).ready(function(){
+            onInitReceiveJob();
+            });
+
+            function onInitReceiveJob(){
+                $('#show_add_money').show();
+                $('#show_bill_money').hide();
+                $('#show_admin_area').hide();
+            
+            }
+
+            function onClickMenuBtn(id){
+                console.log(id);
+                $(".menu-btn").removeClass('active');
+                $('#'+id).addClass('active');
+                $('.text').hide();
+                switch(id){
+                    case 'add_money':
+                        $("#show_add_money").show();
+                        $("#show_bill_money").hide();
+                        $("#show_admin_area").hide();
+                        break;
+                    case 'bill_money':
+                        $("#show_bill_money").show();
+                        $("#show_add_money").hide();
+                        $("#show_admin_area").hide();
+                        break;
+                    case 'admin_area':
+                        $("#show_admin_area").show();
+                        $("#show_add_money").hide();
+                        $("#show_bill_money").hide();
+                        break;
+                }
+            }
+
+            // var button = document.getElementById('#show_add_money');
+
+            // button.onclick = function() {
+            //     var div = document.getElementById('datetime');
+            //     if (div.style.display !== 'none') {
+            //         div.style.display = 'none';
+            //     }
+            //     else {
+            //         div.style.display = 'block';
+            //     }
+            // };
+
+            // var button1 = document.getElementById('#show_bill_money');
+
+            // button.onclick = function() {
+            //     var div = document.getElementById('datetime');
+            //     if (div.style.display !== 'none') {
+            //         div.style.display = 'none';
+            //     }
+            //     else {
+            //         div.style.display = 'block';
+            //     }
+            // };
+        </script>
+    </head>
+    <body>
+        <div class="container_all">
+            <div class="col-12 row"  style="border-bottom: 0.1vw solid #f0d78c;padding: 1vw;margin: 0;">
+                <div class="col-1"></div>
+                <div class="col-10 head">
+                    <div class="topic">
+                        ผู้ดูแลส่วนกลาง
+                    </div>
+                    <div id="datetime" style="display: flex;">
+                        <div class="dropdown" >
+                            <button style="background-color: white; border-color:black; border-radius:0.3vw; color: black; 
+                            width: 7vw; height: 1.85vw ; margin-top: 4vw; font-size: 1vw;  " 
+                                class="btn btn-secondary dropdown-toggle" type="button" 
+                                id="dropdownMenuButton" data-toggle="dropdown" >
+                            เดือน
+                            </button>  
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                href="#">รอ</a></span>
+                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                href="#">อนุมัติ</a></span>
+                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                href="#">ยกเลิก</a></span>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button  style="background-color: white; border-color:black; border-radius:0.3vw; color: black; 
+                            width: 7vw; height: 1.85vw ; margin-top: 4vw; font-size: 1vw; margin-left:1.5vw " 
+                                class="btn btn-secondary dropdown-toggle" type="button" 
+                                id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true" >
+                            ปี
+                            </button>  
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                href="#">รอ</a></span>
+                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                href="#">อนุมัติ</a></span>
+                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                href="#">ยกเลิก</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="col-12 row " id="container1">
+                <div class="col-2">
+                    <div class="menu" >
+                        <div class="menu_button">   
+                            <button class="menu-btn active" id="add_money"type="button" onclick=" onClickMenuBtn(this.id)">
+                                <span>รายงาน<br>เติมเงิน</span>
+                            </button>
+                            <button class="menu-btn" id="bill_money"type="button" onclick=" onClickMenuBtn(this.id)">
+                                <span>รายการ<br>ถอนเงิน</span>
+                            </button>
+                            <button class="menu-btn" id="admin_area"type="button" onclick=" onClickMenuBtn(this.id)">
+                                <span>รายการ<br>ผู้ดูแลพื้นที่</span>
+                            </button>
+                            <div class="vl"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10" >
+                    <div class="col-12 row" >
+                        <div id="show_add_money">
+                            <div class="detail_text" >
+                                <div class="v2"></div>
+                                <div class="col-3 " style="margin-left: 1.5vw;" >
+                                    วันที่
+                                </div>
+                                <div class="col-3" style="margin-left: -0.6vw;">
+                                    TRAN ID
+                                </div>
+                                <div class="col-3"    style="margin-left: -1vw;" >
+                                    LIND ID
+                                </div>
+                                <div class="col-3" style="margin-left: -1.5vw;">
+                                    <div>
+                                        <span>ยอดเงิน</span>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="detail_row" style=" padding-left: 2vw;">
+                                <div class="col-3">
+                                    <div class="date-text"style="font-size: 1vw;">20 กพ. 64</div>
+                                    <div class="time-text" style="font-size: 1vw;">18.32</div>
+                                </div>
+                                <div class="col-3" style="margin-right:0.5vw">
+                                    <span>TRAN041200</span>
+                                </div>
+                                <div class="col-3">
+                                    <span>USER041200</span>
+                                </div>
+                                <div class="col-3" >
+                                    <span>500.00</span>
+                                </div>
+                            
+                            </div>
+                            <div class="detail_row" style=" padding-left: 2vw;">
+                                <div class="col-3">
+                                    <div class="date-text"style="font-size: 1vw;">20 กพ. 64</div>
+                                    <div class="time-text" style="font-size: 1vw;">18.32</div>
+                                </div>
+                                <div class="col-3" style="margin-right:0.5vw">
+                                    <span>TRAN041200</span>
+                                </div>
+                                <div class="col-3">
+                                    <span>USER041200</span>
+                                </div>
+                                <div class="col-3" >
+                                    <span>500.00</span>
+                                </div>
+                            
+                            </div>
+                            <div class="detail_row" style=" padding-left: 2vw;">
+                                <div class="col-3">
+                                    <div class="date-text"style="font-size: 1vw;">20 กพ. 64</div>
+                                    <div class="time-text" style="font-size: 1vw;">18.32</div>
+                                </div>
+                                <div class="col-3" style="margin-right:0.5vw">
+                                    <span>TRAN041200</span>
+                                </div>
+                                <div class="col-3">
+                                    <span>USER041200</span>
+                                </div>
+                                <div class="col-3" >
+                                    <span>500.00</span>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div id="show_bill_money">
+                            <div class="detail_text" >
+                                <div class="v2"></div>
+                                <div class="col-2 lineid"   style="margin-left: 1.8vw; ">
+                                    LINE ID
+                                </div>
+                                <div class="col-3 bank_acc"style="margin-left: -3.5vw;">
+                                    ธนาคาร/บัญชี
+                                </div>
+                                <div class="col-2 approve3" style="margin-left: -2.4vw;">
+                                    ยอดเงิน
+                                </div>
+                                <div class="col-2 approve" style="margin-left:-0.5vw">
+                                    สลิป
+                                </div> 
+                                <div class="col-2 approve1" style="  margin-left: -0.5vw;">
+                                    ยืนยัน
+                                </div>
+                                <div class="col-3"style="margin-left: -4vw;">
+                                    Update By
+                                </div>
+                            </div>
+                            <div class="information2">
+                                <div class="detail_row" style=" padding-left: 2vw;">
+                                    <div class="col-3">
+                                        <span>USER041200</span>
+                                    </div>
+                                    <div class="col-3" id="text"style="margin-right: 2.4vw;margin-left: 1vw;">
+                                        <div class="date-text" style="font-size: 1vw;">กรุงเทพ</div>
+                                        <div class="time-text" style="font-size: 1vw;">204-76043-03</div>
+                                    </div>
+                                    <div class="col-3 total">
+                                        <span>500.00</span>
+                                    </div>
+                                    <div class="col-2"style="
+                                    padding-right: 8vw;">
+                                        <input type="file" id="upload" hidden/>
+                                        <div class="upload_image">
+                                            <div class="image">
+                                                <img src="../static/V-Service - Flow/Image-5.png"style="max-width:1.5vw;height:auto;" >
+                                            </div>
+                                            <label class="icon"for="upload">อัพโหลดรูป</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="margin-top: 0.9vw;margin-left: -1vw;" >
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-3" style="font-size: 1vw;font-weight: bold;padding-top: 2vw;padding-left: 2.2vw;">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div>
+                            <div class="information2">
+                                <div class="detail_row" style=" padding-left: 2vw;">
+                                    <div class="col-3">
+                                        <span>USER041200</span>
+                                    </div>
+                                    <div class="col-3" id="text"style="margin-right: 2.4vw;margin-left: 1vw;">
+                                        <div class="date-text" style="font-size: 1vw;">กรุงเทพ</div>
+                                        <div class="time-text" style="font-size: 1vw;">204-76043-03</div>
+                                    </div>
+                                    <div class="col-3 total">
+                                        <span>500.00</span>
+                                    </div>
+                                    <div class="col-2"style="
+                                    padding-right: 8vw;">
+                                        <input type="file" id="upload" hidden/>
+                                        <div class="upload_image">
+                                            <div class="image">
+                                                <img src="../static/V-Service - Flow/Image-5.png"style="max-width:1.5vw;height:auto;" >
+                                            </div>
+                                            <label class="icon"for="upload">อัพโหลดรูป</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="margin-top: 0.9vw;margin-left: -1vw;" >
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-3" style="font-size: 1vw;font-weight: bold;padding-top: 2vw;padding-left: 2.2vw;">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div>
+                            <div class="information2">
+                                <div class="detail_row" style=" padding-left: 2vw;">
+                                    <div class="col-3">
+                                        <span>USER041200</span>
+                                    </div>
+                                    <div class="col-3" id="text"style="margin-right: 2.4vw;margin-left: 1vw;">
+                                        <div class="date-text" style="font-size: 1vw;">กรุงเทพ</div>
+                                        <div class="time-text" style="font-size: 1vw;">204-76043-03</div>
+                                    </div>
+                                    <div class="col-3 total">
+                                        <span>500.00</span>
+                                    </div>
+                                    <div class="col-2"style="
+                                    padding-right: 8vw;">
+                                        <input type="file" id="upload" hidden/>
+                                        <div class="upload_image">
+                                            <div class="image">
+                                                <img src="../static/V-Service - Flow/Image-5.png"style="max-width:1.5vw;height:auto;" >
+                                            </div>
+                                            <label class="icon"for="upload">อัพโหลดรูป</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="margin-top: 0.9vw;margin-left: -1vw;" >
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-3" style="font-size: 1vw;font-weight: bold;padding-top: 2vw;padding-left: 2.2vw;">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="show_admin_area">
+                            <div class="detail_text">
+                                <div class="v2"></div>
+                                <div class="col-2 lineid" style="margin-left: 1.5vw; margin-right: 0vw;">
+                                    LINE ID
+                                </div>
+                                <div class="col-2 bank_acc"style="margin-left: -0.5vw;">
+                                    รหัสหมู่บ้าน
+                                </div>
+                                <div class="col-2" style="margin-left: -2.5vw;">
+                                    ชื่อพื้นที่
+                                </div>
+                                <div class="col-2" style="margin-left: -1vw;">
+                                    จังหวัด
+                                </div> 
+                                <div class="col-2 "style="margin-left: -1.5vw;" >
+                                    สถานะ
+                                </div>
+                                <div class="col-2 approve4"style="margin-left: -1vw;">
+                                    ยืนยัน
+                                </div>
+                                <div class="col-2 "style="margin-left: -2vw;">
+                                    UpdateBy
+                                </div>
+                               
+                            </div>
+                            <div class="information2">
+                                <div class="detail_row1" style=" padding-left: 2vw;padding-right: 6vw;">
+                                    <div class="col-3 popup">
+                                        <div class="content-text1"style="margin-top: vw;margin-bottom: -1vw;margin-top: 1vw;">
+                                            <button id="myBtn">USER041200</button>
+                                        </div>
+                                        <div class="col-3 popup" style="margin-top:1vw">
+                                            <div id="myModal" class="modal1">
+                                                <span class="close">&times;</span>
+                                                <div class="image_background">
+                                                    <div class="popup_position">
+                                                        <div class=text-popup>
+                                                            <span>รูปถ่ายบัตรประชาชน</span> 
+                                                        </div>
+                                                        <div class="modal-content1">   
+                                                            <div class="popup_image">  
+                                                                <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                            </div>  
+                                                        </div>
+                                                        <div class=text-popup1>
+                                                            <span>รูปถ่ายหน้าตรงพร้อมบัตรประชาชน</span> 
+                                                        </div>
+                                                        <div class="modal-content2">
+                                                            <div class="popup_image">  
+                                                                <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <div class="col-2 whitebox" style="margin-top:1vw; margin-left:1.4vw;font-size:1vw">
+                                        <span>VO1234</span>
+                                    </div>
+                                    <div class="col-2 whitebox" style="margin-left: 3vw;margin-right: 2.5vw;margin-top:1vw;font-size: 0.9vw;">
+                                        <span>หมู่บ้านสวัสดี</span>
+                                    </div>
+                                    <div class="col-2 whitebox" style="margin-left: 0.5vw;margin-right: 1vw;margin-top:1vw;">
+                                        <span>กรุงเทพ</span>
+                                    </div> 
+                                    <div class="col-2 choice" style= "margin-top:0.8vw">
+                                        <div class="dropdown">
+                                            <button style="background-color: white; border:none; color: black; 
+                                                width: 5vw; height: 1.85vw ; margin-top: 0.2vw; font-size: 1vw; margin-left:0.5vw "   
+                                                class="btn btn-secondary dropdown-toggle" type="button" 
+                                                id="dropdownMenuButton" data-toggle="dropdown" >
+                                            เลือก
+                                            </button>  
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                                href="#">รอ</a></span>
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                                href="#">อนุมัติ</a></span>
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                                href="#">ยกเลิก</a></span>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-2" style="margin-top: 0.9vw;margin-left: -1vw;" >
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน" style="
+                                        margin-top: 1.3vw;
+                                    ">
+                                    </form> 
+                                </div>
+                                <div class="col-3" style="font-size: 1vw;font-weight: bold;padding-top: 2.6vw;padding-left: 2.2vw;">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div>
+                            <div class="information2">
+                                <div class="detail_row1" style=" padding-left: 2vw;padding-right: 6vw;">
+                                    <div class="col-3 popup">
+                                        <div class="content-text1"style="margin-top: vw;margin-bottom: -1vw;margin-top: 1vw;">
+                                            <button id="myBtn1">USER041200</button>
+                                        </div>
+                                        <div class="col-3 popup" style="margin-top:1vw">
+                                            <div id="myModal1" class="modal">
+                                                <span class="close">&times;</span>
+                                                <div class="image_background">
+                                                    <div class="popup_position">
+                                                        <div class=text-popup>
+                                                            <span>รูปถ่ายบัตรประชาชน</span> 
+                                                        </div>
+                                                        <div class="modal-content1">   
+                                                            <div class="popup_image">  
+                                                                <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                            </div>  
+                                                        </div>
+                                                        <div class=text-popup1>
+                                                            <span>รูปถ่ายหน้าตรงพร้อมบัตรประชาชน</span> 
+                                                        </div>
+                                                        <div class="modal-content2">
+                                                            <div class="popup_image">  
+                                                                <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <div class="col-2 whitebox" style="margin-top:1vw; margin-left:1.4vw;font-size:1vw">
+                                        <span>VO1234</span>
+                                    </div>
+                                    <div class="col-2 whitebox" style="margin-left: 3vw;margin-right: 2.5vw;margin-top:1vw;font-size: 0.9vw;">
+                                        <span>หมู่บ้านสวัสดี</span>
+                                    </div>
+                                    <div class="col-2 whitebox" style="margin-left: 0.5vw;margin-right: 1vw;margin-top:1vw;">
+                                        <span>กรุงเทพ</span>
+                                    </div> 
+                                    <div class="col-2 choice" style= "margin-top:0.8vw">
+                                        <div class="dropdown">
+                                            <button style="background-color: white; border:none; color: black; 
+                                                width: 5vw; height: 1.85vw ; margin-top: 0.2vw; font-size: 1vw; margin-left:0.5vw "   
+                                                class="btn btn-secondary dropdown-toggle" type="button" 
+                                                id="dropdownMenuButton" data-toggle="dropdown" >
+                                            เลือก
+                                            </button>  
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                                href="#">รอ</a></span>
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                                href="#">อนุมัติ</a></span>
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                                href="#">ยกเลิก</a></span>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-2" style="margin-top: 0.9vw;margin-left: -1vw;" >
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน" style="
+                                        margin-top: 1.3vw;
+                                    ">
+                                    </form> 
+                                </div>
+                                <div class="col-3" style="font-size: 1vw;font-weight: bold;padding-top: 2.6vw;padding-left: 2.2vw;">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div>
+                            <div class="information2">
+                                <div class="detail_row1" style=" padding-left: 2vw;padding-right: 6vw;">
+                                    <div class="col-3 popup">
+                                        <div class="content-text1"style="margin-top: vw;margin-bottom: -1vw;margin-top: 1vw;">
+                                            <button id="myBtn2">USER041200</button>
+                                        </div>
+                                        <div class="col-3 popup" style="margin-top:1vw">
+                                            <div id="myModal2" class="modal1">
+                                                <span class="close">&times;</span>
+                                                <div class="image_background">
+                                                    <div class="popup_position">
+                                                        <div class=text-popup>
+                                                            <span>รูปถ่ายบัตรประชาชน</span> 
+                                                        </div>
+                                                        <div class="modal-content1">   
+                                                            <div class="popup_image">  
+                                                                <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                            </div>  
+                                                        </div>
+                                                        <div class=text-popup1>
+                                                            <span>รูปถ่ายหน้าตรงพร้อมบัตรประชาชน</span> 
+                                                        </div>
+                                                        <div class="modal-content2">
+                                                            <div class="popup_image">  
+                                                                <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <div class="col-2 whitebox" style="margin-top:1vw; margin-left:1.4vw;font-size:1vw">
+                                        <span>VO1234</span>
+                                    </div>
+                                    <div class="col-2 whitebox" style="margin-left: 3vw;margin-right: 2.5vw;margin-top:1vw;font-size: 0.9vw;">
+                                        <span>หมู่บ้านสวัสดี</span>
+                                    </div>
+                                    <div class="col-2 whitebox" style="margin-left: 0.5vw;margin-right: 1vw;margin-top:1vw;">
+                                        <span>กรุงเทพ</span>
+                                    </div> 
+                                    <div class="col-2 choice" style= "margin-top:0.8vw">
+                                        <div class="dropdown">
+                                            <button style="background-color: white; border:none; color: black; 
+                                                width: 5vw; height: 1.85vw ; margin-top: 0.2vw; font-size: 1vw; margin-left:0.5vw "   
+                                                class="btn btn-secondary dropdown-toggle" type="button" 
+                                                id="dropdownMenuButton" data-toggle="dropdown" >
+                                            เลือก
+                                            </button>  
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                                href="#">รอ</a></span>
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                                href="#">อนุมัติ</a></span>
+                                            <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                                href="#">ยกเลิก</a></span>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-2" style="margin-top: 0.9vw;margin-left: -1vw;" >
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน" style="
+                                        margin-top: 1.3vw;">
+                                    </form> 
+                                </div>
+                                <div class="col-3" style="font-size: 1vw;font-weight: bold;padding-top: 2.6vw;padding-left: 2.2vw;">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div>
+                            
+                           
+                            
+                            
+                            
+                        </div>
+                    </div>
+                                
+                                        
+                           
+                                     
+                </div>
+                        
+                            
+                            
+                    <!-- <div id="show_bill_money" >
+                        <div class="detail_text" >
+                            <div class="col-2">
+                                LINE ID
+                            </div>
+                            <div class="col-3" style="margin-left:2vw">
+                                ธนาคาร/บัญชี
+                            </div>
+                            <div class="col-2"style="margin-left:2vw">
+                                ยอดเงิน
+                            </div>  
+                            <div class="col-2"style="margin-left:2.4vw">
+                                สลิป
+                            </div>  
+                            <div class="col-2" style="margin-left:2vw">
+                                <span>ยืนยัน</span>
+                            </div>  
+                            <div class="col-3" >
+                                <span>Update By</span>
+                            </div>  
+                        </div>
+                        <div class="information" >
+                            <div class="col-8 information1">
+                                <div class="col-3" style="margin-top:1vw">
+                                    <span>USER041200</span>
+                                </div>
+                                <div class="col-3" style="margin-top:0.4vw">
+                                    <div class="date-text" style="font-size: 1vw; margin-left: 3vw">กรุงเทพ</div>
+                                    <div style="margin-left: 1vw; margin-bottom:-1vw;  font-size: 0.9vw;">204-76043-03</div>
+                                </div>
+                                <div class="col-2" style="margin-left:4vw; margin-top:1vw">
+                                    <span>500.00</span>
+                                </div>
+                                <div class="col-2" style="margin-right:1vw ;margin-top:0.8vw">
+                                    <div class="upload_image">
+                                        <input type="file" id="upload" hidden/>
+                                        <div class="image">
+                                            <img src="../static/V-Service - Flow/Image-5.png" width="20"height="20">
+                                        </div>
+                                        <label class="icon"for="upload">อัพโหลดรูป</label>
+                                    </div>
+                                </div>  
+                                <div class="col-2">
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-2" style="margin-top:1vw;margin-left:7vw">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div> 
+                            <div class="col-8 information1">
+                                <div class="col-3" style="margin-top:1vw">
+                                    <span>USER041200</span>
+                                </div>
+                                <div class="col-3" style="margin-top:0.4vw">
+                                    <div class="date-text" style="font-size: 1vw; margin-left: 3vw">กรุงเทพ</div>
+                                    <div style="margin-left: 1vw; margin-bottom:-1vw;  font-size: 0.9vw;">204-76043-03</div>
+                                </div>
+                                <div class="col-2" style="margin-left:4vw; margin-top:1vw">
+                                    <span>500.00</span>
+                                </div>
+                                <div class="col-2" style="margin-right:1vw ;margin-top:0.8vw">
+                                    <div class="upload_image">
+                                        <input type="file" id="upload" hidden/>
+                                        <div class="image">
+                                            <img src="../static/V-Service - Flow/Image-5.png" width="20"height="20">
+                                        </div>
+                                        <label class="icon"for="upload">อัพโหลดรูป</label>
+                                    </div>
+                                </div>  
+                                <div class="col-2">
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-2" style="margin-top:1vw;margin-left:7vw">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div> 
+                            <div class="col-8 information1">
+                                <div class="col-3" style="margin-top:1vw">
+                                    <span>USER041200</span>
+                                </div>
+                                <div class="col-3" style="margin-top:0.4vw">
+                                    <div class="date-text" style="font-size: 1vw; margin-left: 3vw">กรุงเทพ</div>
+                                    <div style="margin-left: 1vw; margin-bottom:-1vw;  font-size: 0.9vw;">204-76043-03</div>
+                                </div>
+                                <div class="col-2" style="margin-left:4vw; margin-top:1vw">
+                                    <span>500.00</span>
+                                </div>
+                                <div class="col-2" style="margin-right:1vw ;margin-top:0.8vw">
+                                    <div class="upload_image">
+                                        <input type="file" id="upload" hidden/>
+                                        <div class="image">
+                                            <img src="../static/V-Service - Flow/Image-5.png" width="20"height="20">
+                                        </div>
+                                        <label class="icon"for="upload">อัพโหลดรูป</label>
+                                    </div>
+                                </div>  
+                                <div class="col-2">
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-2" style="margin-top:1vw;margin-left:7vw">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div> 
+                            
+                            
+                        </div> 
+                    </div>
+                    <div id="show_admin_area" >
+                        <div class="detail_text" >
+                            <div class="col-3">
+                                LINE ID
+                            </div>
+                            <div class="col-3" style="margin-left:-1vw">
+                                รหัสหมู่บ้าน
+                            </div>
+                            <div class="col-2">
+                                ชื่อพื้นที่
+                            </div>  
+                            <div class="col-2" style="margin-left:1.4vw">
+                                จังหวัด
+                            </div>  
+                            <div class="col-2" style="margin-left:0.7vw">
+                                สถานะ
+                            </div>  
+                            <div class="col-2"style="margin-left:1vw">
+                                <span class="approve_text">ยืนยัน</span>
+                            </div>  
+                            <div class="col-3" style="margin-left:-1vw">
+                                <span class="approve_text1">Update By</span>
+                            </div>  
+                        </div>
+                        <div class="information" >
+                            <div class="col-9 information1">
+                                <div class="col-3 popup" style="margin-top:1vw">
+                                    <div class="content-text1">
+                                        <button id="myBtn">USER041200</button>
+                                    </div>
+                                    <div id="myModal" class="modal1">
+                                        <span class="close">&times;</span>
+                                        <div class="image_background">
+                                            <div class="popup_position">
+                                                <div class=text-popup>
+                                                    <span >รูปถ่ายบัตรประชาชน</span> 
+                                                </div>
+                                                <div class="modal-content1">   
+                                                    <div class="popup_image">  
+                                                        <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                    </div>  
+                                                </div>
+                                                <div class=text-popup>
+                                                    <span>รูปถ่ายหน้าตรงพร้อมบัตรประชาชน</span> 
+                                                </div>
+                                                <div class="modal-content2">
+                                                    <div class="popup_image">  
+                                                        <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-top:1vw; margin-left:0.4vw;font-size:1vw">
+                                    <span>VO1234</span>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-left:2.2vw; margin-top:1vw; font-size:1vw">
+                                    <span>หมู่บ้านสวัสดี</span>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-left:1.5vw;margin-top:1vw">
+                                    <span>กรุงเทพ</span>
+                                </div> 
+                                <div class="col-2" style= "margin-top:0.8vw">
+                                    <div class="dropdown">
+                                        <button style="background-color: white; border:none; color: black; 
+                                            width: 5vw; height: 1.85vw ; margin-top: 0.2vw; font-size: 1vw; margin-left:0.5vw "   
+                                            class="btn btn-secondary dropdown-toggle" type="button" 
+                                            id="dropdownMenuButton" data-toggle="dropdown" >
+                                        เลือก
+                                        </button>  
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                            href="#">รอ</a></span>
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                            href="#">อนุมัติ</a></span>
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                            href="#">ยกเลิก</a></span>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="col-2" style="margin-left:-2.5vw; margin-top:0.1vw;">
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-2" style="margin-top:1vw;margin-left:5vw">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div> 
+                            <div class="col-9 information1">
+                                <div class="col-3 popup" style="margin-top:1vw">
+                                    <div class="content-text1">
+                                        <button id="myBtn1">USER041200</button>
+                                    </div>
+                                    <div id="myModal1" class="modal1">
+                                        <span class="close">&times;</span>
+                                        <div class="image_background">
+                                            <div class="popup_position">
+                                                <div class=text-popup>
+                                                    <span >รูปถ่ายบัตรประชาชน</span> 
+                                                </div>
+                                                <div class="modal-content1">   
+                                                    <div class="popup_image">  
+                                                        <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                    </div>  
+                                                </div>
+                                                <div class=text-popup>
+                                                    <span>รูปถ่ายหน้าตรงพร้อมบัตรประชาชน</span> 
+                                                </div>
+                                                <div class="modal-content2">
+                                                    <div class="popup_image">  
+                                                        <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-top:1vw; margin-left:0.4vw;font-size:1vw">
+                                    <span>VO1234</span>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-left:2.2vw; margin-top:1vw; font-size:1vw">
+                                    <span>หมู่บ้านสวัสดี</span>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-left:1.5vw;margin-top:1vw">
+                                    <span>กรุงเทพ</span>
+                                </div> 
+                                <div class="col-2" style= "margin-top:0.8vw">
+                                    <div class="dropdown">
+                                        <button style="background-color: white; border:none; color: black; 
+                                            width: 5vw; height: 1.85vw ; margin-top: 0.2vw; font-size: 1vw; margin-left:0.5vw "   
+                                            class="btn btn-secondary dropdown-toggle" type="button" 
+                                            id="dropdownMenuButton" data-toggle="dropdown" >
+                                        เลือก
+                                        </button>  
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                            href="#">รอ</a></span>
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                            href="#">อนุมัติ</a></span>
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                            href="#">ยกเลิก</a></span>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="col-2" style="margin-left:-2.5vw; margin-top:0.1vw;">
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-2" style="margin-top:1vw;margin-left:5vw">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div> 
+                            <div class="col-9 information1">
+                                <div class="col-3 popup" style="margin-top:1vw">
+                                    <div class="content-text1">
+                                        <button id="myBtn2">USER041200</button>
+                                    </div>
+                                    <div id="myModal2" class="modal1">
+                                        <span class="close">&times;</span>
+                                        <div class="image_background">
+                                            <div class="popup_position">
+                                                <div class=text-popup>
+                                                    <span >รูปถ่ายบัตรประชาชน</span> 
+                                                </div>
+                                                <div class="modal-content1">   
+                                                    <div class="popup_image">  
+                                                        <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                    </div>  
+                                                </div>
+                                                <div class=text-popup>
+                                                    <span>รูปถ่ายหน้าตรงพร้อมบัตรประชาชน</span> 
+                                                </div>
+                                                <div class="modal-content2">
+                                                    <div class="popup_image">  
+                                                        <img src="../static/V-Service - Flow/Image-1.png" width="70"height="70">
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-top:1vw; margin-left:0.4vw;font-size:1vw">
+                                    <span>VO1234</span>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-left:2.2vw; margin-top:1vw; font-size:1vw">
+                                    <span>หมู่บ้านสวัสดี</span>
+                                </div>
+                                <div class="col-2 whitebox" style="margin-left:1.5vw;margin-top:1vw">
+                                    <span>กรุงเทพ</span>
+                                </div> 
+                                <div class="col-2" style= "margin-top:0.8vw">
+                                    <div class="dropdown">
+                                        <button style="background-color: white; border:none; color: black; 
+                                            width: 5vw; height: 1.85vw ; margin-top: 0.2vw; font-size: 1vw; margin-left:0.5vw "   
+                                            class="btn btn-secondary dropdown-toggle" type="button" 
+                                            id="dropdownMenuButton" data-toggle="dropdown" >
+                                        เลือก
+                                        </button>  
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                            href="#">รอ</a></span>
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                            href="#">อนุมัติ</a></span>
+                                        <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                            href="#">ยกเลิก</a></span>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="col-2" style="margin-left:-2.5vw; margin-top:0.1vw;">
+                                    <form class="content-btn"action="">
+                                        <input  class="submit" type="" value="ยืนยัน">
+                                    </form> 
+                                </div>
+                                <div class="col-2" style="margin-top:1vw;margin-left:5vw">
+                                    <span>ดำรง</span>
+                                </div>
+                            </div> 
+                        </div> 
+                    </div>
+                    </div> 
+                    <div class="col-1"></div> -->
+                </div> 
+            </div> 
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            var modal1 = document.getElementById("myModal1");
+            var modal2 = document.getElementById("myModal2");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            var btn1 = document.getElementById("myBtn1");
+            var btn2 = document.getElementById("myBtn2");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            btn1.onclick = function() {
+                modal.style.display = "block";
+            }
+            btn2.onclick = function() {
+                modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+        </script
+    </body>
+                                                       

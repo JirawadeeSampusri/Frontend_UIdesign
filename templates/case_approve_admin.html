@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> case approve ผู้ดูแลส่วนกลาง</title>
+        <link rel="stylesheet" href="../static/css/case_approve_admin.css">
+        <link rel="stylesheet" href="../static/Archive2">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Kanit:400,300&subset=thai,latin' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <link href='https://fonts.googleapis.com/css?family=Kanit:400,300&subset=thai,latin' rel='stylesheet'type='text/css'>
+    </head>
+    <body>
+        <div class="container_all">
+            <div class="col-12 row head">
+                <div class="col-1"></div>
+                <div class="col-10" style="border-bottom: 1px solid #f0d78c; text-align: center;">
+                    <div class="topic">
+                        ผู้ดูแลระบบ
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="col-12 row ">
+                <div class="col-2"></div>
+                <div class="col-8" style="border-bottom: 1px solid #f0d78c; text-align: center;">
+                    <div class="detail_text">
+                        <div class="col-3">
+                            LINE ID
+                        </div>
+                        <div class="col-3">
+                            ชื่อ-นามสกุล
+                        </div>
+                        <div class="col-3">
+                            Update By
+                        </div>
+                        <div class="col-3">
+                            Status
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="col-12 row">
+                <div class="col-2"></div>
+                <div class="col-8" >
+                    <div class="information">
+                        <div class="col-3" id="lineid">
+                            USER041200
+                        </div>
+                        <div class="col-3" id="info_name">
+                            ดำรง สวัสดิ์วงษ์
+                        </div>
+                        <div class="col-3" id="info_status">
+                            สมศักดิ์
+                        </div>
+                        <div class="col-3">
+                            <div class="dropdown">
+                                <button style="background-color: white; border:none; color: black; 
+                                    width: 6.5vw; height: 2vw ; font-size: 1vw; "   
+                                    class="btn btn-secondary dropdown-toggle" type="button" 
+                                    id="dropdownMenuButton" data-toggle="dropdown" >
+                                เลือก
+                                </button>  
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                    href="#">รอ</a></span>
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                    href="#">อนุมัติ</a></span>
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                    href="#">ยกเลิก</a></span>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                    <div class="information">
+                        <div class="col-3" id="lineid">
+                            USER041200
+                        </div>
+                        <div class="col-3" id="info_name">
+                            ดำรง สวัสดิ์วงษ์
+                        </div>
+                        <div class="col-3" id="info_status">
+                            สมศักดิ์
+                        </div>
+                        <div class="col-3">
+                            <div class="dropdown">
+                                <button style="background-color: white; border:none; color: black; 
+                                    width: 6.5vw; height: 2vw ; font-size: 1vw;"   
+                                    class="btn btn-secondary dropdown-toggle" type="button" 
+                                    id="dropdownMenuButton" data-toggle="dropdown" >
+                                เลือก
+                                </button>  
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                    href="#">รอ</a></span>
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                    href="#">อนุมัติ</a></span>
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                    href="#">ยกเลิก</a></span>
+                                </div>
+                            </div>
+                        </div>            
+                    </div>
+                    <div class="information">
+                        <div class="col-3" id="lineid">
+                            USER041200
+                        </div>
+                        <div class="col-3" id="info_name">
+                            ดำรง สวัสดิ์วงษ์
+                        </div>
+                        <div class="col-3" id="info_status">
+                            สมศักดิ์
+                        </div>
+                        <div class="col-3">
+                            <div class="dropdown">
+                                <button style="background-color: white; border:none; color: black; 
+                                    width: 6.5vw; height: 2vw ; font-size: 1vw; "   
+                                    class="btn btn-secondary dropdown-toggle" type="button" 
+                                    id="dropdownMenuButton" data-toggle="dropdown" >
+                                เลือก
+                                </button>  
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: orange; font-size: 1vw;"   
+                                    href="#">รอ</a></span>
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(29, 138, 29); font-size: 1vw;"   
+                                    href="#">อนุมัติ</a></span>
+                                <a class="dropdown-item" style=" border-radius:0.3vw; color: rgb(238, 43, 43); font-size: 1vw;"   
+                                    href="#">ยกเลิก</a></span>
+                                </div>
+                            </div>
+                        </div>           
+                    </div>
+                    
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </body>
+
+          
+               
+                                                       

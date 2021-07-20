@@ -1,0 +1,167 @@
+body{
+    font-family: 'Kanit';
+}
+
+    
+
+@media only screen and (max-width: 600px) and (min-width: 321px)  {
+    .container {
+        margin-top: 60vw;
+    }
+    
+    .login{
+        padding-left: 7.8vw;
+        margin-top: 5vw;
+      
+    }          
+     
+        
+}
+@media only screen and (max-width: 320px){
+    .container{
+        margin-top: 55vw;
+    }
+
+    .login{
+        padding-left: 7.8vw;
+        margin-top: 5vw;
+      
+    }   
+    
+    
+}
+@media only screen and (max-width: 720px) and (min-width: 601px) {
+    .container {
+        margin-top: 45vw;
+    }
+
+    .login{
+        padding-left: 7.8vw;
+        margin-top: 5vw;
+      
+    }   
+}
+@media only screen and (max-width: 900px) and (min-width: 721px) {
+    .container {
+        margin-top: 50vw;
+       
+    }
+    .login{
+        padding-left: 7.8vw;
+        margin-top: 5vw;
+      
+    }   
+ 
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 901px) {
+    .container {
+        margin-top: 60vw;
+    }
+    .login{
+        padding-left: 7.8vw;
+        margin-top: 5vw;
+      
+    }   
+}
+@media only screen and (max-width: 1600px) and (min-width: 1301px) {
+    .container {
+        margin-top: -2vw;
+    }
+
+
+    .login{
+        padding-top: -10vw;
+    }
+
+    .image_logo{
+        margin-top: -9vw;
+    }
+
+    .container-1 {
+        padding-top: 2vw;
+    }
+    
+}
+@media only screen and (max-width: 2100px) and (min-width: 1601px) {
+    .container {
+        margin-top: 35vw;
+    }
+
+    .login{
+        margin-top: 8vw;
+    }
+
+    .detail1{
+        margin-top: 5vw;
+  
+    } 
+}
+
+    .login{
+        background-color: #fdeec1;
+        border-radius: 9vw;
+        margin-left: 9.5vw;
+        margin-right: 9.5vw;
+        padding-bottom: 1.5vw;
+        padding-top: 1.5vw;
+   
+    }
+
+    .container-1{
+        padding-bottom: 5vw;
+        padding-top: -10px;
+        margin-top: 20px;
+    
+    }
+
+    .title{
+        font-size: 3vw;
+        font-weight: bold;
+        color: #d96704;
+        padding-top: 25px;
+        background-color: #fdeec1;
+        border-radius: 30px;
+        margin-left: 18vw;
+
+    } 
+
+    .detail{
+        font-size: 2.5vw;
+        font-weight: bold;
+        color: #d96704;
+        padding-left: 11vw;
+        padding-right: 11vw;  
+    }          
+     
+        .detail1{
+            font-size: 2.5vw;
+            font-weight: bold;
+            color: #d96704;
+            padding-left: 9vw;
+            padding-right: 8vw;  
+        }          
+         
+                
+                
+                
+       
+    .container{
+        margin-top: 10vw;
+        font-family: Kanit;
+    }         
+
+    .image_logo{
+        /* margin-left: auto; */
+        margin-right: auto;
+        padding: auto;
+        padding-left: 30%;
+        padding-right: 30%;
+        padding-top: 4vw;
+    }
+  
+       
+    
+        
+    
+       

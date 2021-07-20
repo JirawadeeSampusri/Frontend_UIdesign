@@ -1,0 +1,135 @@
+/* body{
+    font-family: 'Kanit';
+}
+   */
+
+
+   
+@media only screen and (max-width: 600px) and (min-width: 321px)  {
+    .head{
+        margin-top: 7vw;
+    }
+    .information{
+    margin-left: -3vw;
+    }
+
+    #info_status {
+        padding-left:  2vw;
+    }
+
+    .dropdown button{
+        margin-left: -3vw;
+    }
+    
+    .button_dropdown{
+        padding-left:0.5vw ;
+    }
+}
+@media only screen and (max-width: 320px){
+    .head{
+        margin-top: 7vw;
+    }
+
+    #lineid{
+        margin-left: -4vw;
+    }
+
+    #info_name{
+        padding-left: 6vw;
+    }
+   
+   
+}
+@media only screen and (max-width: 720px) and (min-width: 601px) {
+    .head{
+        margin-top: 7vw;
+    }
+    
+}
+@media only screen and (max-width: 900px) and (min-width: 721px) {
+    .head{
+        margin-top: 7vw;
+    }
+
+    .dropdown-toggle{
+        margin-left:-2.5vw;
+    }
+
+    .dropdown{
+        padding-left: 1vw;
+    }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 901px) {
+    .head{
+        margin-top: 7vw;
+    }
+    .dropdown-toggle{
+        margin-left:-1vw;
+    }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1301px) {
+    
+
+        
+}
+@media only screen and (max-width: 2100px) and (min-width: 1601px) {
+    
+}
+.topic{
+    font-size: 2vw;
+    font-weight: bold;
+    padding-top: 3vw;
+    margin-left: 31.5%;
+    margin-right: 31.5%;
+    margin-bottom: 1.3vw;
+  
+}
+
+.container_all{
+    font-family: Kanit;
+}
+.detail_text{
+    font-size:1.5vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    display: flex;
+    margin-bottom: 1.3vw;
+}
+
+.information{
+    font-size: 1.25vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    display: flex;
+    margin-bottom: 1.3vw;
+    padding-left: 3vw;
+    background-color: #fddbaf;
+    border-radius: 0.5vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+ 
+}
+
+    .information #info_name{
+        margin-left: 0.7vw;
+    }
+
+
+    .information #info_status{
+        margin-left: 2.4vw;
+        margin-right: -0.5vw;
+    }
+
+
+
+.dropdown{
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+   
+}
+
+.select_1{
+    color:red
+}
+
